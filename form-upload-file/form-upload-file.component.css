@@ -1,0 +1,95 @@
+.file-upload-conteiner {
+  background-color: white;
+  padding: 5px;
+}
+
+.file-upload-inner {
+  border: dashed 2px #d7dde8;
+  padding-bottom: 1em;
+  border-radius: 8px;
+}
+
+.help-message {
+  font-size: 14px;
+  color: #5986b2;
+  padding: 1em;
+}
+
+.file-input {
+  display: none;
+}
+
+.form-element {
+  position: relative;
+}
+
+.form-element input {
+  border: 0;
+  outline: 0;
+  margin-top: 24px;
+  font-size: 16px;
+  font-weight: normal;
+  color: #2b3f6a;
+  border-bottom: 1px solid #2b3f6a;
+  width: 100%;
+}
+
+.btn-clear {
+  position: absolute;
+  top: 21px;
+  left: 0;
+}
+
+.btn-clear>button {
+  border: 0;
+  outline: 0;
+  background-color: white;
+}
+
+.uploading .btn-clear>button,
+.completed .btn-clear>button {
+  display: none;
+}
+
+.file-upload-inner>ul>li {
+  list-style: none;
+}
+
+.form-element .helper-message {
+  height: 18px;
+  font-size: 12px;
+  text-align: right;
+  color: #2f416e;
+  display: block;
+}
+
+.form-element .progress {
+  display: none;
+}
+
+.form-element.uploading .helper-message {
+  display: none;
+}
+
+.form-element.uploading .progress {
+  display: flex;
+}
+
+.progress {
+    height: 2px;
+    margin-bottom: 16px;
+}
+.progress-bar {
+    animation-name: width-animate;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes width-animate {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}

@@ -1,0 +1,6 @@
+<div class="form-element" [class.error]="control.invalid && (control.dirty || control.touched)" [class.disabled]="disabled" [class.focus]="control.value">
+    <input [type]="type" [id]="name" [name]="name" [formControl]="control" (keyup.enter)="pressEnter()" >
+    <label [class.d-none]="label === ''" [for]="name" class="form-label">{{label}}</label>
+    <small class="font-small helper-message">{{ helper }}</small>
+    <small class="error-message">{{ control.errors | errorMessage : customError}}</small>
+</div>

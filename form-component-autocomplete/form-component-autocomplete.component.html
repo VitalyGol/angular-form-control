@@ -1,0 +1,15 @@
+<div class="autocomplete-container" [class.disabled]="disabled">
+    <div class="form-element" [class.error]="control.invalid && (control.dirty || control.touched)">
+        <input type="text" class="search-control" [formControl]="control" (keydown.enter)="onButtonSearch()" (change)="onChange($event)" (keyup)="onSearch($event)">
+        <label [class.d-none]="label === ''" [for]="name" class="form-label">{{label}}</label>
+        <small class="font-small helper-message">{{ helper }}</small>
+        <small class="error-message">{{ control.errors | errorMessage : customError}}</small>
+    </div>
+    <div *ngIf="selectedResults.length > 0" class="autocomplete-results">
+        <ul>
+            <li *ngFor="let item of selectedResults" (click)="onSelect(item)">
+                <span *ngFor="let i of customSplit(item)" [ngClass]="{'fw-bold': i === currentValue.value }">{{i}}</span>
+            </li>
+        </ul>
+    </div>
+</div>

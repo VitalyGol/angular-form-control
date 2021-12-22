@@ -1,0 +1,158 @@
+.form-select-container.disabled {
+    opacity: 0.5;
+  }
+  
+  .form-element {
+    position: relative;
+    height: 90px;
+  }
+  
+  .form-element .form-label {
+    position: absolute;
+    font-size: 16px;
+    font-weight: normal;
+    color: #2b3f6a;
+    top: 24px;
+    right: 0;
+    transition: all ease 0.2s;
+  }
+  
+  .form-element input {
+    border: 0;
+    outline: 0;
+    margin-top: 24px;
+    font-size: 16px;
+    font-weight: normal;
+    color: #2b3f6a;
+    border-bottom: 1px solid #2b3f6a;
+    width: 100%;
+  }
+  
+  .form-element.disabled input {
+    background-color: #ffffff;
+  }
+  
+  .form-element.focus>label,
+  .form-element input.ng-dirty+label,
+  .form-element input.ng-touched+label,
+  .form-element input:focus+label {
+    top: 0;
+    font-size: 14px;
+    color: #8c8ea2;
+    transition: all ease 0.3s;
+  }
+  
+  .form-element .error-message {
+    font-size: 12px;
+    text-align: right;
+    color: #d21242;
+    font-weight: bold;
+    display: none;
+  }
+  
+  .form-element .helper-message {
+    font-size: 12px;
+    text-align: right;
+    color: #2f416e;
+    display: block;
+  }
+  
+  .form-element.error .helper-message {
+    display: none;
+  }
+  
+  .form-element.error .error-message {
+    display: block;
+  }
+  
+  .form-element.error input {
+    border-bottom: 1px solid #d21242;
+  }
+  
+  .form-select-container {
+    position: relative;
+  }
+  
+  .form-select-container.disabled input {
+    background-color: #ffffff;
+  }
+  
+  input:disabled{
+    background-color: #ffffff;
+  }
+  
+  .form-select-results {
+    position: absolute;
+    max-height: 130px;
+    overflow: auto;
+    top: 51px;
+    width: 100%;
+    background-color: #ffffff;
+    font-size: 16px;
+    text-align: right;
+    color: #2f416e;
+    z-index: 1;
+  }
+  
+  .form-select-results>ul {
+    list-style: none;
+    margin: 0;
+    padding: 5px;
+  }
+  
+  .form-select-results>ul>li {
+    cursor: pointer;
+  }
+  
+  .form-select-results>ul>li:hover {
+    font-weight: bold;
+    color: #048bf3;
+  }
+
+  .arrow {
+    position: absolute;
+   
+    left: 5px;
+    border: solid #008cf3;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transition: all 0.3s ease;
+  }
+
+  .form-select-container .arrow {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    top: 37px;
+  }
+
+  .form-select-container.opened .arrow {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    top: 34px;
+  }
+
+  .form-select-container.disabled .arrow {
+    display: none;
+  }
+  
+  .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+  
+  .left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }
+  
+  .up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+  }
+  
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+  

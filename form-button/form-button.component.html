@@ -1,0 +1,4 @@
+<button type="button" class="btn btn-{{type}}" [ngClass]="{'disabled': disabled}" (click)="onClick($event)">
+    <i *ngIf="iconName !== ''" class="fa fa-{{iconName}}"></i>
+    {{ caption }}
+</button>

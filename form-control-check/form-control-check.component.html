@@ -1,0 +1,7 @@
+<div *ngFor="let checkItem of checkItems" class="form-check {{customStyle}}">
+    <input class="form-check-input" [formControl]="control" type="radio" [name]="name" [id]="name + checkItem.value" [value]="checkItem.value"
+    [checked]="checkItem.value === control.value">
+    <label class="form-check-label" [for]="name + checkItem.value">
+        {{ checkItem.caption }}
+    </label>
+</div>

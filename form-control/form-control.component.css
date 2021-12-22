@@ -1,0 +1,83 @@
+.form-element {
+  position: relative;
+  height: 90px;
+}
+
+.form-element.disabled {
+  opacity: 0.5;
+}
+
+.form-element .form-label {
+  position: absolute;
+  font-size: 16px;
+  font-weight: normal;
+  color: #2b3f6a;
+  top: 24px;
+  right: 0;
+  transition: all ease 0.2s;
+}
+
+.form-element input {
+  border: 0;
+  outline: 0;
+  margin-top: 24px;
+  font-size: 16px;
+  font-weight: normal;
+  color: #2b3f6a;
+  border-bottom: 1px solid #2b3f6a;
+  width: 100%;
+}
+
+.form-element.disabled input {
+  background-color: #ffffff;
+}
+
+.form-element.focus>label,
+.form-element input.ng-dirty+label,
+.form-element input.ng-touched+label,
+.form-element input:focus+label {
+  top: 0;
+  font-size: 14px;
+  color: #8c8ea2;
+  transition: all ease 0.3s;
+}
+
+.form-element .error-message {
+  font-size: 12px;
+  text-align: right;
+  color: #d21242;
+  font-weight: bold;
+  display: none;
+}
+
+.form-element .helper-message {
+  font-size: 12px;
+  text-align: right;
+  color: #2f416e;
+  display: block;
+}
+
+.form-element.error .helper-message {
+  display: none;
+}
+
+.form-element.error .error-message {
+  display: block;
+}
+
+.form-element.error input {
+  color: #d21242;
+  border-bottom: 1px solid #d21242;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

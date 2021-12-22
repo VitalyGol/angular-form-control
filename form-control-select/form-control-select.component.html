@@ -1,0 +1,16 @@
+<div class="form-select-container" [class.disabled]="control.disabled" [class.opened]="opened">
+    <div class="form-element" [class.error]="control.invalid && (control.dirty || control.touched)">
+        <input type="text" class="search-control noselect" [formControl]="control" readonly (click)="openSelect()">
+        <label [class.d-none]="label === ''" [for]="name" class="form-label">{{label}}</label>
+        <i class="arrow"></i>
+        <small class="font-small helper-message">{{ helper }}</small>
+        <small class="error-message">{{ control.errors | errorMessage : customError}}</small>
+    </div>
+    <div *ngIf="selectedResults.length > 0 && opened" class="form-select-results">
+        <ul>
+            <li *ngFor="let item of selectedResults" (click)="onSelect(item)">
+                <span>{{ item.value}}</span>
+            </li>
+        </ul>
+    </div>
+</div>

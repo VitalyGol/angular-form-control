@@ -1,0 +1,15 @@
+.form-check  .form-check-label {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: right;
+    color: #6a7896;
+}
+
+.form-check-input:checked[type=radio] + .form-check-label {
+    color: #048bf3;
+}
+
+.form-check .form-check-input {
+    float: right;
+    margin-right: -1.5em;
+}

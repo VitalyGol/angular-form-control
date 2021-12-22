@@ -1,0 +1,20 @@
+<div class="file-upload-conteiner">
+    <div class="file-upload-inner text-center" appDragAndDropFile (OnFileDropped)="SelectFile($event)">
+        <p class="help-message">גרור ושחרר קבצים לכאן או לחץ על "בחר קבצים"</p>
+        <ul *ngIf="filesList.length > 0">
+            <li *ngFor="let item of filesList">
+                <div class="form-element" [class.completed]="item.completed" [class.uploading]="item.uploading">
+                    <input type="text" class="file-name" [value]="item.name" readonly>
+                    <div class="btn-clear"><button (click)="DeleteFile(item)"><img src="../../../../assets/images/forms/clear-btn.png"></button></div>
+                    <small class="font-small helper-message">{{ item.message }}</small>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <app-form-button type="secondary" caption="בחר קבצים" [disabled]="maxFilesCount <= filesList.length || IsUploading()" (Click)="fileUpload.click()"></app-form-button>
+        <app-form-button type="primary" caption="העלאה" [disabled]="CheckUpload() === false" (Click)="UploadFiles()"></app-form-button>
+        <input type="file" class="file-input" [accept]="requiredFileType" (change)="SelectFileFromBrowse($event)" #fileUpload>
+    </div>
+</div>
